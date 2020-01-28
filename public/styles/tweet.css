@@ -1,0 +1,43 @@
+article:hover {
+  box-shadow: 5px 5px rgb(105, 131, 214)
+}
+
+section > article {
+  border: 4px solid black;
+  width: 90%;
+  margin: 10px auto 10px auto;
+}
+
+article > header, article > footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+article hr {
+  border-top: 4px solid black;
+  margin: 0px 10px 0px 10px;
+}
+
+article div {
+  display: flex;
+  align-items: center;
+  padding: 20px 20px 10px 20px;
+}
+
+article footer > div {
+  padding-top: 0px;
+}
+
+.handle {
+  color: rgb(193, 193, 193);
+  font-weight: 700;
+}
+
+article > p {
+  margin: 30px 20px 30px 20px;
+}
+
+footer span {
+  font-size: 0.7em;
+}

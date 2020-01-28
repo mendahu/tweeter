@@ -8,6 +8,7 @@ $(document).ready(function() {
     if (tweetChecker(text)) {
       const tweet = $(this).serialize();
       submitTweet(tweet);
+      $(this).trigger("reset");
     }
   });
 
@@ -20,8 +21,6 @@ $(document).ready(function() {
       $tweetForm.slideUp();
     }
   };
-
-  toggleTweetForm();
 
   $("nav .icon").click(function() {
     toggleTweetForm();

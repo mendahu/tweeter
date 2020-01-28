@@ -1,8 +1,8 @@
-.new-tweet {
+#new-tweet {
   padding: 5%;
 }
 
-[name="text"] {
+#form-tweet-submit textarea {
   width: 100%;
   margin: 10px auto 10px auto;
   background-color: inherit;
@@ -13,15 +13,11 @@
   resize: none;
 }
 
-[name="text"]:focus {
+#form-tweet-submit textarea:focus {
   outline: none;
 }
 
-[type="submit"], .counter {
-  font-family: "Bungee", sans-serif;  
-}
-
-[type="submit"] {
+#form-tweet-submit [type="submit"] {
   background-color: #4056A1;
   color: white;
   font-size: 0.8em;

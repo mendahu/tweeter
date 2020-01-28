@@ -11,19 +11,19 @@ nav {
   justify-content: space-between;
 }
 
-nav > div {
+#leftnav, #rightnav {
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
 }
 
-nav .icon {
+#pullicon {
   color: lightgreen;
   position: relative;
 }
 
-nav .icon:hover {
+#pullicon:hover {
   animation-duration: 1.5s;
   animation-name: pulldown;
   animation-iteration-count: infinite;
@@ -42,8 +42,4 @@ nav .icon:hover {
     color: lightgreen;
     top: 0px;
   }
-}
-
-.brand {
-  font-family: "Bungee", sans-serif;
 }

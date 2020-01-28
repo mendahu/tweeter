@@ -2,13 +2,13 @@ article:hover {
   box-shadow: 5px 5px rgb(105, 131, 214)
 }
 
-section > article {
+article {
   border: 4px solid black;
   width: 90%;
   margin: 30px auto 30px auto;
 }
 
-article > header, article > footer {
+article header, article footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -25,7 +25,7 @@ article div {
   padding: 20px 20px 10px 20px;
 }
 
-article footer > div {
+article footer div {
   padding-top: 0px;
 }
 
@@ -34,7 +34,7 @@ article footer > div {
   font-weight: 700;
 }
 
-article > p {
+article p {
   margin: 30px 20px 30px 20px;
 }
 

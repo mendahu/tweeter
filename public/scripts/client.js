@@ -9,20 +9,21 @@ $(document).ready(function() {
       const tweet = $(this).serialize();
       submitTweet(tweet);
       $(this).trigger("reset");
+      $("#tweet-input").keyup();
     }
   });
 
   const toggleTweetForm = function() {
-    const $tweetForm = $(".new-tweet");
+    const $tweetForm = $("#new-tweet");
     if ($tweetForm.is(":hidden")) {
       $tweetForm.slideDown();
-      $(".new-tweet textarea").focus();
+      $("#new-tweet textarea").focus();
     } else {
       $tweetForm.slideUp();
     }
   };
 
-  $("nav .icon").click(function() {
+  $("#pullicon").click(function() {
     toggleTweetForm();
   });
 

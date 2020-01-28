@@ -40,6 +40,24 @@ $(document).ready(function() {
     }
   };
 
+  $("#form-tweet-submit").on("submit", function(event) {
+    event.preventDefault();
+    const tweet = $(this).serialize();
+    submitTweet(tweet);
+  });
+
+  const submitTweet = function(tweet) {
+
+    $.post("tweets", tweet, function(data) {
+      return data;
+    })
+      .done(function(data) {
+        console.log(data);
+      });
+
+  };
+
+  /*
   const data = [
     {
       "user": {
@@ -64,6 +82,16 @@ $(document).ready(function() {
       "created_at": 1461113959088
     }
   ];
+  */
+
+  const loadTweets = function() {
+    $.get("tweets", function(data) {
+      return data;
+    })
+      .done(function(data) {
+        renderTweets(data);
+      });
+  };
   
-  renderTweets(data);
+  loadTweets();
 });

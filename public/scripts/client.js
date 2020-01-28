@@ -1,10 +1,39 @@
 $(document).ready(function() {
+  
+  $("#form-tweet-submit").on("submit", function(event) {
+    event.preventDefault();
+  
+    const text = $(this).children().first().val();
+      
+    if (tweetChecker(text)) {
+      const tweet = $(this).serialize();
+      submitTweet(tweet);
+    }
+  });
+
+  const toggleTweetForm = function() {
+    const $tweetForm = $(".new-tweet");
+    if ($tweetForm.is(":hidden")) {
+      $tweetForm.slideDown();
+      $(".new-tweet textarea").focus();
+    } else {
+      $tweetForm.slideUp();
+    }
+  };
+
+  toggleTweetForm();
+
+  $("nav .icon").click(function() {
+    toggleTweetForm();
+  });
 
   const createTweetElement = function(tweet) {
     const user = tweet.user;
     const today = new Date();
     const daysLeft = (today - tweet.created_at) / 1000 / 60 / 60 / 24;
   
+    const $tweetText = $("<p>").text(tweet.content.text);
+
     const tweetMarkup = `
       <article>
         <header>
@@ -16,7 +45,7 @@ $(document).ready(function() {
             <span class="handle">${user.handle}</span>
           </div>
         </header>
-        <p>${tweet.content.text}</p>
+        <p>${$tweetText.html()}</p>
         <hr>
         <footer>
           <div>
@@ -35,8 +64,10 @@ $(document).ready(function() {
   };
   
   const renderTweets = function(tweets) {
+    const container = $('#tweets-container');
+    container.empty();
     for (const tweet of tweets) {
-      $('#tweets-container').append(createTweetElement(tweet));
+      container.prepend(createTweetElement(tweet));
     }
   };
 
@@ -52,24 +83,13 @@ $(document).ready(function() {
     }
   };
 
-  $("#form-tweet-submit").on("submit", function(event) {
-    event.preventDefault();
-
-    const text = $(this).children().first().val();
-    
-    if (tweetChecker(text)) {
-      const tweet = $(this).serialize();
-      submitTweet(tweet);
-    }
-  });
-
   const submitTweet = function(tweet) {
 
     $.post("tweets", tweet, function(data) {
       return data;
     })
-      .done(function(data) {
-        console.log(data);
+      .done(function() {
+        loadTweets();
       });
 
   };

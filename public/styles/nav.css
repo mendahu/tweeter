@@ -7,8 +7,43 @@ nav {
   width: 100%;
   padding: 1.5em;
   top: 0px;
+  display: flex;
+  justify-content: space-between;
 }
 
-nav > span {
+nav > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+nav .icon {
+  color: lightgreen;
+  position: relative;
+}
+
+nav .icon:hover {
+  animation-duration: 1.5s;
+  animation-name: pulldown;
+  animation-iteration-count: infinite;
+}
+
+@keyframes pulldown {
+  from {
+    color: lightgreen;
+    top: 0px;
+  }
+  66% {
+    color: #FFFFFF;
+    top: 5px;
+  }
+  to {
+    color: lightgreen;
+    top: 0px;
+  }
+}
+
+.brand {
   font-family: "Bungee", sans-serif;
 }

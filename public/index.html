@@ -3,6 +3,7 @@
   <head>
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
     <!-- External CSS -->
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
@@ -29,22 +30,24 @@
 
   <body>
     <!-- Top nav bar (fixed) -->
-    <nav>
-      <div id="leftnav">
-        <span class="brand">tweeter</span>
-      </div>
-      <div id="rightnav">
-        <span><strong>Write</strong> a new tweet</span>
-        <span id="pullicon"><strong>&#x21E3;</strong></span>
-      </div>
-    </nav>
+    <div class="nav-container">
+      <nav>
+        <div id="leftnav">
+          <span class="brand">tweeter</span>
+        </div>
+        <div id="rightnav">
+          <span><strong>Write</strong> a new tweet</span>
+          <span id="pullicon"><strong>&#x21E3;</strong></span>
+        </div>
+      </nav>
+    </div>
 
     <header class="profile">
       <div>
         <img src="/images/profile-hex.png">
       </div>
       <div>
-        <h2>Your Name</h2>
+        <h2><strong>Jake</strong> Robins</h2>
       </div>
     </header>
   

@@ -1,12 +1,8 @@
 nav {
   height: 120px;
-  position: fixed;
-  z-index: 2;
-  background-color: #4056A1;
+  background-color: transparent;
   color: #FFFFFF;
-  width: 100%;
   padding: 1.5em;
-  top: 0px;
   display: flex;
   justify-content: space-between;
 }
@@ -41,5 +37,11 @@ nav {
   to {
     color: lightgreen;
     top: 0px;
+  }
+}
+
+@media (min-width: 1024px) {
+  nav {
+    background-color: #4056A1;
   }
 }

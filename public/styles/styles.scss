@@ -1,0 +1,237 @@
+/**************************************************
+IMPORTS OF SASS PARTIALS FOR SMALL ISOLATED COMPONENTS
+**************************************************/
+
+@use 'jump-button';
+@use 'error-msg';
+@use 'pulldown-icon';
+@use 'button';
+
+/**************************************************
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * https://css-tricks.com/international-box-sizing-awareness-day/
+ * Do not modify these two selectors, please
+**************************************************/
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/**************************************************
+GLOBAL SASS VARIABLES
+**************************************************/
+
+/* Base colors and fonts */
+$base-text-color: #545149;
+$light-text-color: #FFFFFF;
+$base-bg-color: #f4f1ec;
+$font-stack: "Source Sans Pro", sans-serif;
+$brand-font: "Bungee", sans-serif;
+
+/* for the user's twitter handle */
+$handle-color: rgb(193, 193, 193);
+
+/* for the profile picture section */
+$profile-bg-color: #00751f;
+$profile-bg-img: url("https://www.transparenttextures.com/patterns/cardboard-flat.png");
+
+/**************************************************
+LAYOUT AND SECTION STYLING
+**************************************************/
+
+html {
+  background-color: $base-bg-color;
+  font-size: 20px;
+  font-family: $font-stack;
+  color: $base-text-color;
+}
+
+body {
+  .profile {
+    min-height: 400px;
+    padding-top: 100px;
+    background-color: $profile-bg-color;
+    background-image: $profile-bg-img;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: flex-end;
+    text-align: center;
+  }
+}
+
+.brand {
+  font-family: $brand-font;
+}
+
+.handle {
+  color: $handle-color;
+  font-weight: 700;
+}
+
+.nav-container {
+  position: relative;
+}
+
+nav {
+  position: absolute;
+  width: 100%;
+  top: 0px;
+  height: 120px;
+  background-color: transparent;
+  color: #FFFFFF;
+  padding: 1.5em;
+  display: flex;
+  justify-content: space-between;
+
+  #leftnav, #rightnav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+h1, h2, h3, h4, h5, h6  {
+  color: $light-text-color;
+  font-weight: inherit;
+}
+
+/**************************************************
+NEW TWEET FORM
+**************************************************/
+
+#new-tweet-form-container {
+  padding: 5%;
+}
+
+#tweet-input {
+  width: 100%;
+  margin: 10px auto 10px auto;
+  background-color: inherit;
+  border: none;
+  height: 2em;
+  border-bottom: 4px black solid;
+  font-weight: 700;
+  resize: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.counter {
+  float: right;
+  position: relative;
+  top: 12px;
+}
+
+/**************************************************
+TWEETS IN FEED
+**************************************************/
+
+.tweet {
+  border: 4px solid $base-text-color;
+  width: 98%;
+  margin: 30px auto 30px auto;
+
+  &:hover {
+    box-shadow: 5px 5px rgb(105, 131, 214)
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+
+    .tweet-avatar {
+      margin: 15px;
+      flex-grow: 0;
+    }
+
+    .tweet-user-info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 15px;
+      flex-grow: 1;
+    }
+  }
+
+  p {
+    margin: 30px 20px 30px 20px;
+  }
+
+  hr {
+    border-top: 4px solid black;
+    margin: 0px 10px 0px 10px;
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    div {
+      display: flex;
+      align-items: center;
+      padding-top: 0px;
+      padding: 20px 20px 10px 20px;
+    }
+
+    span {
+      font-size: 0.7em;
+    }
+  }
+}
+
+/**************************************************
+MEDIA QUERIES
+**************************************************/
+
+@media (min-width: 450px) {
+  body .profile {
+    padding-top: 60px;
+  }
+  main {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+
+@media (min-width: 768px) {
+  .tweet {
+    width: 90%;
+  }
+
+  .tweet-user-info {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 1024px) {
+  body .profile {
+    width: 30%;
+    margin-left: 5%;
+    float: left;
+  }
+
+  main {
+    width: 60%;
+    margin-right: 5%;
+    margin-top: 160px;
+  }
+
+  nav {
+    position: fixed;
+    z-index: 2;
+    background-color: #4056A1
+  }
+}

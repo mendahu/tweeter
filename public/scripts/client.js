@@ -14,10 +14,10 @@ $(document).ready(function() {
   });
 
   const toggleTweetForm = function() {
-    const $tweetForm = $("#new-tweet");
+    const $tweetForm = $("#new-tweet-form-container");
     if ($tweetForm.is(":hidden")) {
       $tweetForm.slideDown();
-      $("#new-tweet textarea").focus();
+      $("#new-tweet-form-container textarea").focus();
     } else {
       $tweetForm.slideUp();
     }
@@ -28,7 +28,7 @@ $(document).ready(function() {
   });
 
   $(".jump-button").click(function() {
-    const $tweetForm = $("#new-tweet");
+    const $tweetForm = $("#new-tweet-form-container");
     if (!$tweetForm.is(":visible")) toggleTweetForm();
     $("window").scrollTop(0);
   });
@@ -41,7 +41,7 @@ $(document).ready(function() {
     const $tweetText = $("<p>").text(tweet.content.text);
 
     const tweetMarkup = `
-      <article>
+      <article class="tweet">
         <header>
         <img class="tweet-avatar" src="${user.avatars}">
         <div class="tweet-user-info">

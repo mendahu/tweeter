@@ -4,11 +4,22 @@ article:hover {
 
 article {
   border: 4px solid black;
-  width: 90%;
+  width: 98%;
   margin: 30px auto 30px auto;
 }
 
-article header, article footer {
+@media (min-width: 768px) {
+  article {
+    width: 90%;
+  }
+}
+
+article header {
+  display: flex;
+  align-items: center;
+}
+
+article footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -19,14 +30,11 @@ article hr {
   margin: 0px 10px 0px 10px;
 }
 
-article div {
+article footer div {
   display: flex;
   align-items: center;
-  padding: 20px 20px 10px 20px;
-}
-
-article footer div {
   padding-top: 0px;
+  padding: 20px 20px 10px 20px;
 }
 
 .handle {
@@ -40,4 +48,25 @@ article p {
 
 footer span {
   font-size: 0.7em;
+}
+
+.tweet-avatar {
+  margin: 15px;
+  flex-grow: 0;
+}
+
+.tweet-user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 15px;
+  flex-grow: 1;
+}
+
+@media (min-width: 768px) {
+  .tweet-user-info {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
 }

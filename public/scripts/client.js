@@ -43,15 +43,13 @@ $(document).ready(function() {
     const tweetMarkup = `
       <article>
         <header>
-          <div>
-            <img src="${user.avatars}">
-            <span>${user.name}</span>
-          </div>
-          <div>
-            <span class="handle">${user.handle}</span>
-          </div>
+        <img class="tweet-avatar" src="${user.avatars}">
+        <div class="tweet-user-info">
+          <span>${user.name}</span>
+          <span class="handle">${user.handle}</span>
+        </div>
         </header>
-        <p>${$tweetText.html()}</p>
+        <p class="tweet-text">${$tweetText.html()}</p>
         <hr>
         <footer>
           <div>

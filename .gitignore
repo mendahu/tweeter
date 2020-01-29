@@ -1,3 +1,10 @@
 node_modules/
 .env
 .DS_Store
+public/styles/error-msg.csss
+public/styles/header.csss
+public/styles/jump-button.csss
+public/styles/layout.csss
+public/styles/nav.csss
+public/styles/new-tweet.csss
+public/styles/tweet.csss

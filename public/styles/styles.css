@@ -124,6 +124,10 @@ body .profile {
   font-family: "Bungee", sans-serif;
 }
 
+.brand-logo {
+  font-size: 1.2rem;
+}
+
 .handle {
   color: #c1c1c1;
   font-weight: 700;
@@ -135,12 +139,13 @@ body .profile {
 
 nav {
   position: absolute;
-  width: 100%;
+  width: 96%;
+  left: 2%;
+  right: 2%;
   top: 0px;
   height: 120px;
   background-color: transparent;
   color: #FFFFFF;
-  padding: 1.5em;
   display: flex;
   justify-content: space-between;
 }
@@ -244,16 +249,30 @@ MEDIA QUERIES
     margin-right: auto;
     margin-left: auto;
   }
-}
-@media (min-width: 768px) {
+
   .tweet {
-    width: 90%;
+    width: 100%;
   }
 
-  .tweet-user-info {
+  #new-tweet-form-container {
+    padding: 5% 0%;
+  }
+
+  nav {
+    width: 90%;
+    left: 5%;
+    right: 5%;
+  }
+}
+@media (min-width: 768px) {
+  .tweet header .tweet-user-info {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+  }
+
+  .brand-logo {
+    font-size: 1.8rem;
   }
 }
 @media (min-width: 1024px) {
@@ -264,12 +283,16 @@ MEDIA QUERIES
   }
 
   main {
-    width: 60%;
+    width: 55%;
     margin-right: 5%;
     margin-top: 160px;
   }
 
   nav {
+    width: 100%;
+    padding: 0% 5%;
+    left: 0;
+    right: 0;
     position: fixed;
     z-index: 2;
     background-color: #4056A1;

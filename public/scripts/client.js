@@ -77,12 +77,23 @@ $(document).ready(function() {
     }
   };
 
+  const triggerError = function(msg) {
+    const $msgWindow = $("#error-msg");
+    $msgWindow.children().text(msg);
+    $msgWindow.slideDown();
+    setTimeout(function() {
+      $msgWindow.slideUp();
+      $msgWindow.children().text("");
+    }, 4000);
+  };
+
   const tweetChecker = function(tweetText) {
+
     if (!tweetText) {
-      alert("Please enter text in to your tweet before submitting!");
+      triggerError("Please enter some text!");
       return false;
     } else if (tweetText.length > 140) {
-      alert("Your tweet is too long! Have fewer thoughts.");
+      triggerError("Your tweet is too long! Have fewer thoughts.");
       return false;
     } else {
       return true;

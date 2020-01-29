@@ -27,6 +27,12 @@ $(document).ready(function() {
     toggleTweetForm();
   });
 
+  $(".jump-button").click(function() {
+    const $tweetForm = $("#new-tweet");
+    if (!$tweetForm.is(":visible")) toggleTweetForm();
+    $("window").scrollTop(0);
+  });
+
   const createTweetElement = function(tweet) {
     const user = tweet.user;
     const today = new Date();

@@ -23,57 +23,60 @@
   </head>
 
   <body>
+    <div class="breakpoint-container">
+      <!-- Top nav bar (fixed in desktop breakpoint) -->
+      <div class="nav-container">
+        <nav>
+          <div class="breakpoint-container">
+            <div id="leftnav">
+              <span class="brand brand-logo">tweeter</span>
+            </div>
+            <div id="rightnav">
+              <span><strong>Write</strong> a new tweet</span>
+              <svg id="pullicon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-down"><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+            </div>
+          </div>
+        </nav>
+      </div>
 
-    <!-- Top nav bar (fixed in desktop breakpoint) -->
-    <div class="nav-container">
-      <nav>
-        <div id="leftnav">
-          <span class="brand brand-logo">tweeter</span>
+      <!-- profile photo area header -->
+      <header class="profile">
+        <div>
+          <img src="/images/profile-hex.png">
         </div>
-        <div id="rightnav">
-          <span><strong>Write</strong> a new tweet</span>
-          <svg id="pullicon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-down"><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+        <div>
+          <h1><strong>Jake</strong> Robins</h1>
         </div>
-      </nav>
+      </header>
+    
+      <!-- Page-specific (main) content here -->
+      <main class="container">
+
+        <!-- new tweet form -->
+        <section id="new-tweet-form-container" hidden>
+          <form id="form-tweet-submit" action="/tweets/" method="POST">
+            <textarea id="tweet-input" name="text" placeholder="What are you humming about?"></textarea>
+            <input class="brand button" type="submit" value="Tweet">
+            <span class="counter brand" id="tweet-counter">140</span>
+          </form>
+          <footer id="error-msg" hidden>
+            <span></span>
+          </footer>
+        </section>
+
+        <!-- Jump button appears when user scrolls down to allow quick return to top -->
+        <div class="jump-button-container">
+          <div class="jump-button" hidden>
+            <a href="#top" class="jump-button-link">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-up"><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Tweets live here - this content generated programmatically with AJAX -->
+        <section id="tweets-container">
+        </section>
+      </main>
     </div>
-
-    <!-- profile photo area header -->
-    <header class="profile">
-      <div>
-        <img src="/images/profile-hex.png">
-      </div>
-      <div>
-        <h1><strong>Jake</strong> Robins</h1>
-      </div>
-    </header>
-  
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-
-      <!-- new tweet form -->
-      <section id="new-tweet-form-container" hidden>
-        <form id="form-tweet-submit" action="/tweets/" method="POST">
-          <textarea id="tweet-input" name="text" placeholder="What are you humming about?"></textarea>
-          <input class="brand button" type="submit" value="Tweet">
-          <span class="counter brand" id="tweet-counter">140</span>
-        </form>
-        <footer id="error-msg" hidden>
-          <span></span>
-        </footer>
-      </section>
-
-      <!-- Jump button appears when user scrolls down to allow quick return to top -->
-      <div class="jump-button-container">
-        <div class="jump-button" hidden>
-          <a href="#top" class="jump-button-link">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-up"><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
-          </a>
-        </div>
-      </div>
-
-      <!-- Tweets live here - this content generated programmatically with AJAX -->
-      <section id="tweets-container">
-      </section>
-    </main>
   </body>
 </html>

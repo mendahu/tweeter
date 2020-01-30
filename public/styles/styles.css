@@ -175,9 +175,11 @@ nav {
   left: 2%;
   right: 2%;
   top: 0px;
-  height: 120px;
   background-color: transparent;
   color: #FFFFFF;
+}
+nav div {
+  height: 120px;
   display: flex;
   justify-content: space-between;
 }
@@ -349,6 +351,16 @@ MEDIA QUERIES
     position: fixed;
     z-index: 2;
     background-color: #4056A1;
+  }
+}
+@media (min-width: 1400px) {
+  .breakpoint-container {
+    width: 1400px;
+    margin: 0px auto;
+  }
+
+  nav .breakpoint-container {
+    width: 1260px;
   }
 }
 

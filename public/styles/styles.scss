@@ -87,11 +87,14 @@ nav {
   left: 2%;
   right: 2%;
   top: 0px;
-  height: 120px;
   background-color: transparent;
   color: #FFFFFF;
-  display: flex;
-  justify-content: space-between;
+  
+  div {
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+  }
 
   #leftnav, #rightnav {
     display: flex;
@@ -287,4 +290,16 @@ MEDIA QUERIES
     z-index: 2;
     background-color: #4056A1
   }
+}
+
+@media (min-width: 1400px) {
+  .breakpoint-container {
+    width: 1400px;
+    margin: 0px auto;
+  }
+
+  nav .breakpoint-container {
+    width: 1400px * 0.9;
+  }
+
 }

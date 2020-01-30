@@ -1,23 +1,26 @@
 $(document).ready(function() {
 
+  //sets behaviour of submit button for new tweets
   $("#form-tweet-submit").on("submit", function(event) {
     event.preventDefault();
   
     const text = $(this).children().first().val();
       
+    //verifies tweet meets submission guidelines
     if (tweetChecker(text)) {
       const tweet = $(this).serialize();
       submitTweet(tweet);
-      $(this).trigger("reset");
-      $("#tweet-input").keyup();
+      $(this).trigger("reset"); //resets form after submission
+      $("#tweet-input").keyup(); //forces a keyup event to reset the tweet character counter
     }
   });
 
+  //controls the animation to show or hide the tweet form
   const toggleTweetForm = function() {
     const $tweetForm = $("#new-tweet-form-container");
     if ($tweetForm.is(":hidden")) {
       $tweetForm.slideDown();
-      $("#new-tweet-form-container textarea").focus();
+      $("#tweet-input").focus();
     } else {
       $tweetForm.slideUp();
     }

@@ -21,7 +21,7 @@ Tweeter is a simple, single-page Twitter clone designed to demonstrate CSS and S
 
 ### Fully Responsive ###
 
-A fully responsive design wth breakpoints at 450px, 768px and 1024px.
+A fully responsive design wth breakpoints at 450px, 768px, 1024px and 1400px.
 
 Navbar is fixed in desktop view and scrolls with page in mobile view to preserve screen real estate.
 

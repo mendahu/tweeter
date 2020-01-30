@@ -27,4 +27,22 @@ Navbar is fixed in desktop view and scrolls with page in mobile view to preserve
 
 !["Fully Responsive Design"](https://github.com/mendahu/tweeter/blob/master/docs/responsive.gif?raw=true)
 
-### 
+### Animated SVGs andd interactve elements
+
+Animated elements show user how to interact with the page. Some remain hidden until needed.
+
+!["Pull-down Icon"](https://github.com/mendahu/tweeter/blob/master/docs/animated_svg.gif?raw=true)
+!["Jump button"](https://github.com/mendahu/tweeter/blob/master/docs/jump-button.gif?raw=true)
+
+### Asynchronous Interaction
+
+Tweet asynchronously submit and load in to feed using AJAX.
+
+!["Asynchronous interaction"](https://github.com/mendahu/tweeter/blob/master/docs/tweet.gif?raw=true)
+
+### Error handling
+
+Dynamic counter tracks user input and turned red to warn user they have exceed tweet limit. Submission attempts are marked by an inpage error screen which disappears after a timeout.
+
+!["Character counter"](https://github.com/mendahu/tweeter/blob/master/docs/over-tweet.gif?raw=true)
+!["Error messages"](https://github.com/mendahu/tweeter/blob/master/docs/error.gif?raw=true)

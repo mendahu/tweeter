@@ -145,7 +145,8 @@ TWEETS IN FEED
   margin: 30px auto 30px auto;
 
   &:hover {
-    box-shadow: 5px 5px rgb(105, 131, 214)
+    box-shadow: 5px 5px rgb(105, 131, 214);
+    transition: box-shadow 0.2s;
   }
 
   header {

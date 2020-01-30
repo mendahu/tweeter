@@ -198,6 +198,7 @@ TWEETS IN FEED
 }
 .tweet:hover {
   box-shadow: 5px 5px #6983d6;
+  transition: box-shadow 0.2s;
 }
 .tweet header {
   display: flex;

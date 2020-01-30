@@ -178,19 +178,46 @@ TWEETS IN FEED
   footer {
     display: flex;
     justify-content: space-between;
-    align-items: center;
 
     div {
       display: flex;
       align-items: center;
       padding-top: 0px;
-      padding: 20px 20px 10px 20px;
+      padding: 10px 20px;
+      margin-bottom: 4px;
+    }
+
+    .interaction-div {
+      margin-bottom: 0px;
+      display: flex;
+      justify-content: space-between;
+      width: 125px;
     }
 
     span {
       font-size: 0.7em;
     }
   }
+}
+
+.tweet-interaction-button {
+  width: 18px;
+
+  &:hover {
+
+    &.int-flag {
+      fill: orange;
+    }
+  
+    &.int-repeat {
+      fill: green;
+    }
+  
+    &.int-heart {
+      fill: red;
+    }
+  }
+
 }
 
 /**************************************************

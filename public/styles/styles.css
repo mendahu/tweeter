@@ -224,16 +224,35 @@ TWEETS IN FEED
 .tweet footer {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 .tweet footer div {
   display: flex;
   align-items: center;
   padding-top: 0px;
-  padding: 20px 20px 10px 20px;
+  padding: 10px 20px;
+  margin-bottom: 4px;
+}
+.tweet footer .interaction-div {
+  margin-bottom: 0px;
+  display: flex;
+  justify-content: space-between;
+  width: 125px;
 }
 .tweet footer span {
   font-size: 0.7em;
+}
+
+.tweet-interaction-button {
+  width: 18px;
+}
+.tweet-interaction-button:hover.int-flag {
+  fill: orange;
+}
+.tweet-interaction-button:hover.int-repeat {
+  fill: green;
+}
+.tweet-interaction-button:hover.int-heart {
+  fill: red;
 }
 
 /**************************************************

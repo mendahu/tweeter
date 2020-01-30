@@ -101,10 +101,10 @@ $(document).ready(function() {
   
   //Empties the current tweets and redraws them from database gven the  results of an ajax retrieval
   const renderTweets = function(tweets) {
-    const container = $('#tweets-container');
-    container.empty();
+    const $container = $('#tweets-container');
+    $container.empty();
     for (const tweet of tweets) {
-      container.prepend(createTweetElement(tweet));
+      $container.prepend(createTweetElement(tweet));
     }
   };
 

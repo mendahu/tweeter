@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  
+
   $("#form-tweet-submit").on("submit", function(event) {
     event.preventDefault();
   

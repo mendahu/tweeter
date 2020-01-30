@@ -44,28 +44,51 @@ ERROR MESSAGES
 PULL DOWN ICON TO ACCTIVATE NEW TWEET FORM
 **************************************************/
 #pullicon {
-  color: lightgreen;
+  color: #4056A1;
   position: relative;
+  width: 30px;
+  height: 30px;
 }
-
 #pullicon:hover {
-  animation-duration: 1.5s;
+  animation-duration: 1.2s;
   animation-name: pulldown;
   animation-iteration-count: infinite;
 }
 
 @keyframes pulldown {
   from {
+    color: #4056A1;
+    top: 0px;
+  }
+  60% {
+    color: #000000;
+    top: 5px;
+  }
+  to {
+    color: #4056A1;
+    top: 0px;
+  }
+}
+@keyframes pulldown-lg {
+  from {
     color: lightgreen;
     top: 0px;
   }
-  66% {
-    color: #FFFFFF;
+  60% {
+    color: #ffffff;
     top: 5px;
   }
   to {
     color: lightgreen;
     top: 0px;
+  }
+}
+@media (min-width: 1024px) {
+  #pullicon {
+    color: lightgreen;
+  }
+  #pullicon:hover {
+    animation-name: pulldown-lg;
   }
 }
 .button {
@@ -153,6 +176,7 @@ nav #leftnav, nav #rightnav {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   text-align: center;
 }
 

@@ -42,7 +42,7 @@ Tweet elements have box-shadow effect on hover, and interactive buttons show col
 
 New tweet box is hidden by default to add focus to tweet content and is accessible with a quick button click.
 
-!["Tweet"](https://github.com/mendahu/tweeter/blob/master/docs/drow-down.gif?raw=true)
+!["Tweet"](https://github.com/mendahu/tweeter/blob/master/docs/drop-down.gif?raw=true)
 
 ### Asynchronous Interaction
 

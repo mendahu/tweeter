@@ -34,6 +34,16 @@ Animated elements show user how to interact with the page. Some remain hidden un
 !["Pull-down Icon"](https://github.com/mendahu/tweeter/blob/master/docs/animated_svg.gif?raw=true)
 !["Jump button"](https://github.com/mendahu/tweeter/blob/master/docs/jump-button.gif?raw=true)
 
+Tweet elements have box-shadow effect on hover, and interactive buttons show coloured hover effects.
+
+!["Tweet"](https://github.com/mendahu/tweeter/blob/master/docs/animations.gif?raw=true)
+
+### Drop-down Element
+
+New tweet box is hidden by default to add focus to tweet content and is accessible with a quick button click.
+
+!["Tweet"](https://github.com/mendahu/tweeter/blob/master/docs/drow-down.gif?raw=true)
+
 ### Asynchronous Interaction
 
 Tweet asynchronously submit and load in to feed using AJAX.
@@ -43,6 +53,8 @@ Tweet asynchronously submit and load in to feed using AJAX.
 ### Error handling
 
 Dynamic counter tracks user input and turned red to warn user they have exceed tweet limit. Submission attempts are marked by an inpage error screen which disappears after a timeout.
+
+Textarea automatically expands with text.
 
 !["Character counter"](https://github.com/mendahu/tweeter/blob/master/docs/over-tweet.gif?raw=true)
 !["Error messages"](https://github.com/mendahu/tweeter/blob/master/docs/error.gif?raw=true)
